@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Utilities */
+
+.shadowNormal {
+    box-shadow: 0px 0px 10px -3px;
+}
+
+.special {
+    border: solid 3px #d9d9d9;
+}
+
+.gradientRed {
+    background-image: linear-gradient(0deg, #EF233Cff, #ff85a1);
+}
+
+.softFont {
+    font-weight: 100;
+}
+
+.largeSize {
+    font-size: 24px;
+}
+
+.mediumSize {
+    font-size: 20px;
+}
+
+.smallSize {
+    font-size: 16px;
+}
+
+.grayColor {
+    color: #495057;
+}
+
+.graySoft {
+    color: #6c757d;
+}
+
+.deepGray {
+    color: #353535;
+}
+
+.thePerfectPadding {
+    padding: 15px 0;
+}
+
+.secondPadding {
+    padding: 18px 0;
+}
+
+.dot {
+    margin: 5px;
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border-radius: 50%;
+    background-color: #212529;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* The main container */
+
+.container {
+    height: 100vh;
+    background-color: #ffd6ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* The image container */
+
+.imgSide {
+    height: 400px;
+    width: 400px;
+    background-color: black;
+    overflow: hidden;
+}
+
+.firstProduct {
+    height: 100%;
+    position: relative;
+}
+
+.firstImg {
+    position: absolute;
+    left: 7%;
+    top: 0;
+    width: 360px;
+    rotate: 10deg;
+    z-index: 1;
+    animation: gry 2.5s ease infinite;
+}
+
+@keyframes gry {
+    0% {
+        filter: grayscale(1);
+    }
+
+    50% {
+        filter: grayscale(0);
+    }
+
+    100% {
+        filter: grayscale(1);
+    }
+}
+
+.background {
+    position: absolute;
+    right: -30px;
+    bottom: 0;
+    font-size: 110px;
+    color: white;
+    opacity: 0.2;
+    cursor: default;
+}
+
+.light {
+    width: 60px;
+    filter: invert(100%) sepia(0%) saturate(7487%) hue-rotate(356deg) brightness(99%) contrast(106%);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.threeDots {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.thirdDot {
+    background-color: #fff;
+}
+
+/* The informations container */
+
+.infoSide {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 500px;
+    width: 330px;
+    background-color: white;
+    z-index: 1;
+    padding: 40px 25px;
+}
+
+
+.ratingAndPricing {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.star {
+    width: 20px;
+    filter: invert(87%) sepia(38%) saturate(4694%) hue-rotate(351deg) brightness(104%) contrast(101%);
+}
+
+.headlines h1 {
+    cursor: pointer;
+}
+
+.colors {
+    padding-top: 15px;
+}
+
+.colorsDots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.color {
+    padding: 10px;
+}
+
+.colorOne {
+    background-color: #f15bb5;
+}
+
+.colorTwo {
+    background-color: #e71d36
+}
+
+.colorThree {
+    background-color: #ff9f1c;
+}
+
+.colorFour {
+    background-color: #8ac926;
+}
+
+.colorContainer {
+    margin: 0 5px;
+    border-radius: 50%;
+    width: 31px;
+    height: 31px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sizes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.size {
+    width: 35px;
+    height: 35px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buying {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.addToCart {
+    cursor: pointer;
+    margin-bottom: 18px;
+    padding: 10px 50px;
+    border-radius: 20px;
+    color: white;
+    box-shadow: 0px 5px 10px -3px #EF233Cff;
+}
+
+.addToCart:hover {
+    background-image: linear-gradient(0deg, #ff9505, #ffb627);
+    box-shadow: 0px 5px 10px -3px #ff9505;
+}
+
+.addToCart:active {
+    background-image: linear-gradient(0deg, #ff8600, #ffb627);
+}
+
+.addToCart a {
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 700px) {
+    .container {
+        flex-direction: column;
+        background-color: white;
+        height: 100%;
+    }
+
+    .imgSide {
+        width: 100vw;
+        box-shadow: none;
+    }
+    .infoSide {
+        width: 100vw;
+        box-shadow: none;
+    }
+
+    .firstImg {
+        position: static;
+    }
+
+    .firstProduct {
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+
+    .imgDots {
+        width: 15px;
+        height: 15px;
+    }
+
+
+    .background {
+        display: none;
+    }
+
+    .light {
+        width: 40px;
+    }
+
+}
